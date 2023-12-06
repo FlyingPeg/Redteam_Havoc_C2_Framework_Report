@@ -76,6 +76,7 @@ Ta đã thu thập tất cả thông tin, tiến hành ssh vào máy web.
 Để xác định được hệ thống gồm bao nhiêu máy, ta sẽ tiến hành scan mạng nội bộ. Nhưng do vấn đề phát hiện và ghi log của máy, không sử dụng nmap mà ta sẽ tạo một file bash script có tên là check.sh và ping mạng `10.10.10.0/24`.
 
 ![](/Images/Picture13.png)
+
 Ta tìm được 3 ip sau: `10.10.10.3`, `10.10.10.101` và `10.10.10.102` => hệ thống gồm 4 máy bao gồm web.
 Trong quá trình reconnaissance máy web, tìm thấy một file `backup.sh` chứa credential của ip `10.10.10.102` ở đường dẫn `/var/www`. Khi ssh sử dụng credential đó, thành công chiếm máy `10.10.10.102`.
  
